@@ -6,7 +6,8 @@ class AddStudent extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      formTerm: ''
+      formTerm: '',
+      index: 0
     };
   }
 
@@ -22,8 +23,12 @@ class AddStudent extends Component {
 
   displayVictim() {
     let max = this.props.allStudents.length;
-    var random = Math.floor(Math.random() * max);
-    this.props.newVictim(this.props.allStudents[random]);
+    let random = Math.floor(Math.random() * max);
+    while (this.state.index === random) {
+      random = Math.floor(Math.random() * max);
+    }
+    this.setState({ index: random });
+    this.props.newVictim(this.props.allStudents[this.state.index]);
   }
 
   render() {
