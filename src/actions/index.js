@@ -6,9 +6,15 @@ export function addStudent(name) {
 }
 
 export function deleteStudent(name) {
-  console.log('action', name);
   return {
     type: 'DELETE_STUDENT',
+    payload: name
+  };
+}
+
+export function newVictim(name) {
+  return {
+    type: 'NEW_VICTIM',
     payload: name
   };
 }
