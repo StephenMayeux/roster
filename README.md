@@ -20,4 +20,4 @@ Checkout this repo, install dependencies, then start the webpack process with th
 	> npm start
 ```
 
-Then open up your brower and point it to `localhost:8080` to use the application yourself.
+Then open up your browser and point it to `localhost:8080` to use the application yourself.
