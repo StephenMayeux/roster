@@ -30,12 +30,12 @@ class AddStudent extends Component {
     return (
       <div>
         <h3>{this.props.victim}</h3>
-        <form className="form-group" onSubmit={this.handleFormSubmit.bind(this)}>
-          <input className="form-control" value={this.state.formTerm} onChange={this.handleChange.bind(this)}/>
-        </form>
         <button className="btn btn-primary" onClick={this.displayVictim.bind(this)} >
           Choose a Victim!
         </button>
+        <form className="form-group" onSubmit={this.handleFormSubmit.bind(this)}>
+          <input className="form-control" value={this.state.formTerm} onChange={this.handleChange.bind(this)}/>
+        </form>
       </div>
     );
   }
