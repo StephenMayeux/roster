@@ -4,3 +4,11 @@ export function addStudent(name) {
     payload: name
   };
 }
+
+export function deleteStudent(name) {
+  console.log('action', name);
+  return {
+    type: 'DELETE_STUDENT',
+    payload: name
+  };
+}
